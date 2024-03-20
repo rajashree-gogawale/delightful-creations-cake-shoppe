@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Products</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+    nav {
+        background-color: #e44d26;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+    }
+    nav a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        background-color: #f0d7d7;
+        color: black;
+    }
+    section {
+        padding: 20px;
+        margin-top: 50px; /* Adjust according to navbar height */
+        
+    }
+    .mid-1{
+        background-color: #f0d7d7;
+        /* border-radius: 8px; */
+        box-sizing: 340px;
+        padding-top:40px ;
+        /* width: 100%; */
+    }
+    .mid-1 p{
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+        
+    }
+    .mid-2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+       
+    .box {
+        border: 1px solid #ccc; /* Border for the box */
+        border-radius: 8px; /* Border radius */
+        padding: 15px; /* Padding for the box */
+        text-align: center;
+        margin-bottom: 20px;
+        width: 320px; /* Adjust width to fit three boxes in one line */
+        justify-content: center;
+        margin-bottom: 35px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-color: #fd9898;
+    }
+
+    .box img {
+    width: 300px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    border-radius: 8px; /* Border radius for images */
+    border-color: #fd9898;
+transition: filter 0.4s; /* Add transition for smooth effect */
+}
+
+    .box:hover img {
+        filter: blur(5px); 
+    }
+
+    .description p {
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .price {
+        color: green; /* Example color for price */
+    }
+
+    .order-now {
+        background-color: rgba(224, 96, 4, 0.938);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .image-container {
+        text-align: center; /* Center align columns */
+        
+    }
+    .mid-3 {
+    background-color: #ebd4d4; /* Set background color */
+    text-align: center; /* Center align text */
+    padding: 30px; /* Add padding */
+    margin-top: 20px; /* Add margin to separate from other sections */
+
+}
+
+.mid-3 p {
+    margin: 0; /* Remove default margin */
+    color: #e44d26; /* Set text color */
+    font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+        
+}
+
+    
+.image-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+    margin-top: 32px; /* Adjust top margin */
+}
+
+.mid-4 {
+    flex: 0 0 calc(33.33% - 30px); /* Adjust flex basis to fit three boxes per row */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box1 {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 320px;
+    border-color: #fd9898;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.box1 img {
+    
+    width: 300px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    border-radius: 8px; /* Border radius for images */
+    border-color: #fd9898;
+transition: filter 0.4s; /* Add transition for smooth effect */
+}
+
+.box1:hover img {
+    filter: blur(5px);
+}
+
+.sandwich {
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #f0d7d7;
+    text-align: center;
+}
+
+.sandwich .intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sandwich .intro-text h2 {
+    font-size: 30px;
+    color: #e44d26;
+    margin-bottom: 20px;
+}
+
+.sandwich .intro-text p {
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
+
+
+.sandwich-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sandwich-images img {
+    width: 30%; /* Adjust the width as needed */
+    border-radius: 8px; /* Add border-radius if desired */
+    margin-right: 10px; /* Add spacing between images */
+}
+
+.sandwich-images img:last-child {
+    margin-right: 0; /* Remove right margin for the last image */
+}
+
+
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#brownie">Brownies</a>
+    <a href="#bread">Breads</a>
+    <a href="#sandwich">Sandwiches And Savours</a>
+    <a href="#croissants-and-danishes">Croissants And Danishes</a>
+    <a href="#cakes">Cakes</a>
+</nav>
+
+<section id="brownie">
+    <div class="mid-1">
+        <h1 style="font-size: 35px; color: #e44d26; text-align: center ;  " >BROWNIES</h1>
+        <p style="color: #f0a8a8;text-align: center; font-weight: bolder;">*****</p>
+        <p>This is where it all began! Our home-style brownies are what made delightscreation the household name it is today. Best enjoyed with a scoop of ice cream and chocolate sauce or devoured as is.</p>
+    </div>
+</section>
+
+<div class="image-container">
+    <div class="mid-2">
+        <div class="box">
+            <img src="https://theobroma.in/cdn/shop/products/ChocoChipBrownie2_400x400.jpg?v=1631970995" alt="Chochip Brownie">
+            <div class="description">
+                <p>Chochip Brownie</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://theobroma.in/cdn/shop/products/CookieBrownie2_400x400.jpg?v=1632140691" alt="Cookie Brownie">
+            <div class="description">
+                <p>Cookie Brownie</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    
+
+        <div class="box">
+            <img src="https://theobroma.in/cdn/shop/products/MillionaireBrownie3_400x400.jpg?v=1632142737" alt="Cookie Brownie">
+            <div class="description">
+                <p>Millioniare Brownie</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://theobroma.in/cdn/shop/products/assorted-brownies-6-1_400x400.jpg?v=1656404063" alt="Cookie Brownie">
+            <div class="description">
+                <p>Assorted Brownie Box6-pcs</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    
+ <div class="box">
+            <img src="https://theobroma.in/cdn/shop/products/WalnutBrownie3_400x400.jpg?v=1632145965" alt="Cookie Brownie">
+            <div class="description">
+                <p>Walnut Brownie</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    
+
+
+
+        <div class="box">
+            <img src="https://theobroma.in/cdn/shop/products/OverloadBrownie3_400x400.jpg?v=1632143286" alt="Millioniare Brownie">
+            <div class="description">
+                <p>Overload Brownie</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+            </div>
+
+
+
+            <div class="box">
+            <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyb3duaWV8ZW58MHx8MHx8fDA%3D alt="Cookie Brownie">
+            <div class="description">
+                <p>Brownie with Ice-cream</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJvd25pZXxlbnwwfHwwfHx8MA%3D%3D" alt="Cookie Brownie">
+            <div class="description">
+                <p>Raspberry Brownie</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://theobroma.in/cdn/shop/files/Oreo-brownie-1_400x400.jpg?v=1709277530" alt="Cookie Brownie">
+            <div class="description">
+                <p>Orio Brownie </p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+
+ <div class="box">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGJyb3duaWV8ZW58MHx8MHx8fDA%3D" alt="Cookie Brownie">
+            <div class="description">
+                <p>ChocoStick Brownie </p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+
+<div class="box">
+            <img src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnJvd25pZXxlbnwwfHwwfHx8MA%3D%3D" alt="Cookie Brownie">
+            <div class="description">
+                <p>Chockaltechip Brownie </p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+<div class="box">
+            <img src="https://images.unsplash.com/photo-1589113705076-ff28f41a2b8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJyb3duaWV8ZW58MHx8MHx8fDA%3D" alt="Cookie Brownie">
+            <div class="description">
+                <p> RaspberryVeg Brownie </p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+
+<section id="bread">
+    <!-- Add content for Breads section here -->
+    <div class="mid-3">
+        <p style="font-size: 35px;">BREADS</p>
+        <p style="color: #f0a8a8;text-align: center; font-weight: bolder;">*****</p>
+        <h1 style="font-size: 20px;">Our range of artisanal wheat and multi-grain breads are freshly baked every day using time-honoured methods of production. Whether it's a toast for breakfast or pizza for dinner, we've got your day covered!</h1>
+    </div>
+</section>
+
+<div class="image-container1">
+    <div class="mid-4">
+        <div class="box1">
+            <img src="https://theobroma.in/cdn/shop/products/Baguette1_400x400.jpg?v=1645773019" alt="Chochip Brownie">
+            <div class="description">
+                <p>French Bagutee</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mid-4">
+        <div class="box1">
+            <img src="https://theobroma.in/cdn/shop/products/WheatBreadLoaf1_400x400.jpg?v=1632145981" alt="Chochip Brownie">
+            <div class="description">
+                <p>WheatBreadLoaf</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="mid-4">
+        <div class="box1">
+            <img src="https://theobroma.in/cdn/shop/products/MulitgrainBreadLoaf2_400x400.jpg?v=1632142758" alt="Chochip Brownie">
+            <div class="description">
+                <p>MulitgrainBreadLoaf</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="mid-4">
+        <div class="box1">
+            <img src="https://images.unsplash.com/photo-1628809643534-b3d1faffe8d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJyZWFkcyUyMHdpdGglMjBuYW1lc3xlbnwwfHwwfHx8MA%3D%3D" alt="Chochip Brownie">
+           
+           
+           
+            <div class="description">
+                <p>grainBreadLoaf</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        </div>
+        <div class="mid-4">
+            <div class="box1">
+            <img src="https://plus.unsplash.com/premium_photo-1666675707930-aff264c34996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYWRzfGVufDB8fDB8fHww" alt="Chochip Brownie">
+           <div class="description">
+                <p>Sourdough</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="mid-4">
+            <div class="box1">
+            <img src="https://images.unsplash.com/photo-1581065556762-ee5e34e5f181?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chochip Brownie">
+           <div class="description">
+                <p>Magataf</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        </div>
+        <div class="mid-4">
+            <div class="box1">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJyZWFkfGVufDB8fDB8fHww" alt="Chochip Brownie">
+           <div class="description">
+                <p>CornPuff Bread</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="mid-4">
+            <div class="box1">
+            <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyZWFkfGVufDB8fDB8fHww" alt="Chochip Brownie">
+           <div class="description">
+                <p>CornBread</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+        </div>
+
+</div>
+
+
+
+<section id="sandwich" class="sandwich">
+    <!-- Add content for Sandwiches And Savours section here -->
+    <div class="intro-text">
+        <h2>SANDWICHES AND SAVOURS</h2>
+        <p>At DelightsCreation, we're not just about sweet treats. We also take pride in our delectable savory offerings, carefully crafted to satisfy your cravings for something savory and satisfying. From sandwiches to savory pastries, each item is made with the finest ingredients and a passion for flavor.</p>
+        <p>Explore our range of savory delights below and discover the perfect savory treat to complement your day.</p>
+    </div>
+</section>
+
+
+    <!-- Add content for Sandwiches And Savours section here -->
+    <div class="sandwich-images">
+        <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyZWFkfGVufDB8fDB8fHww" alt="Sandwich 1">
+        <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyZWFkfGVufDB8fDB8fHww" alt="Sandwich 2">
+        <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyZWFkfGVufDB8fDB8fHww" alt="Sandwich 3">
+    </div>
+
+
+
+
+
+
+</section>
+
+<section id="croissants-and-danishes">
+    <!-- Add content for Croissants And Danishes section here -->
+</section>
+
+<section id="cakes">
+    <!-- Add content for Cakes section here -->
+</section>
+
+<!-- Some content to create scrollable page -->
+<div style="height: 1500px;">
+    Scroll down to see the effect
+</div>
+
+<script>
+    // Scroll to section when clicking on navbar links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+   } );
+</script>
+
+</body>
+</html>

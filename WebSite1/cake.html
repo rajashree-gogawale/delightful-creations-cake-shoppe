@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shoppe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgba(255, 255, 255, 0.973);
+        }
+
+        nav {
+            background-color: #e44d26;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #333;
+        }
+
+        .container {
+            display: flex;
+            position: static;
+            margin-top: 3%;
+        }
+
+        .container img {
+            width: 650px;
+            justify-content: space-between;
+        }
+
+        .tagline {
+            width: 70%;
+            padding: 20px;
+            float: left;
+            background-color: #f8f8f8;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+      
+      
+        .column {
+            width: 20%;
+            padding: 15px;
+            box-sizing: border-box;
+            
+        }
+
+        .column img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            opacity: 2px;
+        }
+
+        .midle {
+            
+            padding: 48px;
+            background-color:pink; /* Background color for the midle div */
+            font-size: 24px;
+            color: #333;
+            margin-right: 342px;
+           
+        }
+        
+              .btn{
+              background-color: #ee1aa7b6; /* Green */
+              border: none;
+              color: white;
+              padding: 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+                border-radius: 12px;
+               }
+            .midle img {
+                        float: left;
+                        margin-left: 104%; /* Adjusted margin-left */
+                        width: 350px; /* Adjusted width */
+                        margin-bottom: 10%; /* Adjusted margin-bottom */
+                        margin-top: -310px;
+                        margin-right: 3px;
+                        height: 358px;
+                    }
+                    .midle p{
+                    font-weight: bolder;
+                    font-size: 30px;
+                      }
+
+        
+        .mid2 p{
+          font-size: 30px;
+          font-weight: bolder;
+          color: rgba(228, 57, 86, 0.753);
+          text-align: center;
+         
+        }
+
+        
+        
+        .column1 {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            
+        }
+        
+        .gallery2-container {
+          justify-content: space-around;
+          display: flex;
+          float: left;
+          margin: auto;
+         
+
+        }        
+        .column1 img{
+          width: 100%;
+          float: left;
+            height: 60%;
+        }
+        .column1 p{
+          font-size: 20px;
+          color: rgb(241, 102, 125);
+          text-align: center;
+        
+        }
+        #news{
+            background-color: antiquewhite;
+        }
+        /* .reviews {
+      max-width: 600px;
+      margin: 0 auto;
+    } */
+
+    .review {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      margin-right: 10px;
+      
+    }
+
+    .reviewer {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      color: #ffc107;
+    }
+
+    .comment {
+      margin-top: 10px;
+    }
+    .review-container{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        margin-top: 12%;
+        background-color: #f1e1e1 ;
+      
+        
+    }
+       .reviews{
+        width: 45%;
+       } 
+       .text {
+        width: 45%;
+       }
+       .text h1{
+        font-size: 65px;
+        padding: 10px;
+       margin-left: 15%;
+       }
+
+       .about {
+      max-width: 835px;
+      margin: 0 auto;
+      display: flex;
+       align-items: center; 
+       background-color:pink;
+      border-radius: 20px;
+       
+    }
+
+    .about .image {
+      flex: 0 0 40%; /* Adjust the percentage to control the width of the image */
+      margin-right: 20px;
+      margin-left:10px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      
+    }
+
+    .about .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about .text {
+      flex: 1;
+    }
+    .text p{
+        font-style: initial;
+        color: #333;
+        font-weight: bold;
+        font-size: 28px;
+    }
+
+
+    .offers-section {
+            background: rgba(255, 186, 186, 0.959);
+            padding: 30px;
+            border-radius: 13px;
+            max-width: 800px;
+             margin-top: 30px;
+            color: #221a1a;
+            justify-content: space-around;
+            margin-left: 18%;
+          
+          
+        }
+        footer {
+            background: #f1e1e1;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 13%;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <nav>
+            <a onclick="showContent('home')">Home</a>
+            <a href="Products.html">Products</a>
+            
+            <a href="cupcake.html">Cupcakes</a>
+            <a href=about.html>About Us</a>
+           
+        </nav>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="C:\Users\Admin\Downloads\cake12.jpg" alt="Cake Image" />
+        </div>
+        <div class="tagline">
+            <h2 style="color:#e44d26 ;">Delightful Creations</h2>
+            <p style="color:black ;"><b>"Baking Joy into Every Cake, Celebrating Life's Sweetest Moments."</b></p>
+        </div>
+    </div>
+    <p style="text-align: center; font-size: 40px;color: #e6390ee3;"><b>Desserts Gallery</b></p>
+
+    <div class="gallery-container">
+    
+        <div class="column">
+            <img src="C:\Users\Admin\Downloads\yogurth-dessert.jpg" alt="Cupcake 1">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Admin\Downloads\berry dessert.jpg" alt="Cupcake 2">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Admin\Downloads\strawberry-dessert.jpg" alt="Cupcake 3">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Admin\Downloads\creme-brulee.jpg" alt="Cupcake 4">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Admin\Downloads\des1.jpg" alt="Cupcake 5">
+        </div>
+    </div>
+
+    <div class="midle">
+        <p style="font-size: 30px;"><b>One Dozen at One Click!</b><br><br>Hit the add button and we will pick out 12 delicious treats<br>from our "always available cupcakes".</p>
+        <button class="btn">Order Now</button>
+        <div>
+          <img src="C:\Users\Admin\Downloads\chocklate.jpg" alt="Cupcake 5">
+        </div>
+         </div>
+      
+      
+      
+         <p style="font-size: 40px ; color: rgba(224, 96, 4, 0.938); text-align: center;"><b>Special Events & Festivals</b></p>
+          
+         <div class="gallery2-container">
+          <div class="column1">
+         <img src="C:\Users\Admin\Downloads\birthday1.jpg" alt="Cupcake 3">
+            <p>Birthday Cake</p>
+          </div>
+          <div class="column1">
+          <img src="C:\Users\Admin\Downloads\mother.jpg" alt="Cupcake 3">
+          <p>Velentine's Day</p>
+          </div>
+          <div class="column1">
+           <img src="C:\Users\Admin\Downloads\cake5.jpg" alt="Cupcake 3">
+           <p>Mother's Day</p>
+      </div>
+        </div>
+    
+        <section>
+            <p style="font-size: 40px; color: #d84824; text-align: center;" ><b> Let's Try Our Cupcakes! </b></p>
+            <img src="C:\Users\Admin\Downloads\combo3.jpg" alt="Cupcake 3" style=" margin-left: 15%;">
+        </section>
+            
+        <div class="review-container">
+            <div class="text">
+                <h1>What's Our Customer Say?</h1>
+            </div>
+              <div class="reviews">
+                <div class="review">
+                    <div class="reviewer">Viki Raykar</div>
+                  <div class="rating">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                  <div class="comment">
+                    "The cake was delicious, and the design was beautiful! My guests loved it".
+                  </div>
+                </div>
+            
+                <div class="review">
+                  <div class="reviewer">Akash Mande</div>
+                  <div class="rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+                  <div class="comment">
+                    "Amazing service and the best cake I've ever had. Will definitely order again!"
+                  </div>
+                </div>
+              </div>
+        </div>
+        <p style="font-size: 40px; color: #eb4319; text-align: center; font-weight: bold;">Our Vision</p>
+            
+        <div class="about">
+            <div class="image">
+              <img src="C:\Users\Admin\Downloads\baker.jpg" alt="Baker">
+            </div>
+            <div class="text">
+                <p>Welcome to Delicious Cakes!<br><br> We're passionate about crafting delightful cakes using the finest ingredients. <br>Our goal is to sweeten your moments and create lasting memories through the magic of our scrumptious creations.<br><br> Thank you for choosing Delicious Cakes for your celebrations!</p>
+                  </div>    
+                  </div>
+                  <div class="offers-section">
+                    <h2 style="font-weight: bolder;">Our Offers!</h2>
+                    <p style="font-weight: bolder;">Check out our latest offers and sweet deals:</p>
+                    <ul>
+                        <li>Special discounts on custom cake orders for birthdays and celebrations.</li>
+                        <li>Buy one, get one free cupcakes every Friday!</li>
+                        <li>Seasonal promotions and limited-time offers.</li>
+                    </ul>
+                    <p style="font-weight: bold;">Don't miss out on these delightful opportunities to save and savor!</p>
+                </div>
+            
+            
+                <footer>
+                  <p>&copy; 2023 Delight Creations. All rights reserved.</p>
+              </footer>
+                  
+                
+    </body>
+</html>
+

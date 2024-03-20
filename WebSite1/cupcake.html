@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcakes</title>
+    
+    <style>
+        .para {
+            background-color:rgb(248, 246, 246);
+            text-align: center;
+            block-size: 127px;
+            margin: 20px;
+            margin-left: 29px;
+            margin-right: 15px;
+            border-radius: 8px;
+            font-size: 35px;
+        }
+        
+        .para h1 {
+            justify-content: center;
+            font-size: 50px;
+            padding: 12px;
+            font-weight: bold;
+            color: rgba(224, 96, 4, 0.938);
+        }
+        
+        .column {
+            float: left;
+            height: auto; /* Changed to auto to accommodate varying image heights */
+            width: 300px;
+            justify-content: center;
+            margin-left: 30px;
+        }
+        
+        .column img {
+            width: 100%; /* Make sure images fill their container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+        }
+        
+        .column p {
+            text-align: center; /* Center-align text */
+            margin-top: 10px; /* Add margin at the top */
+            border: 1px solid #ccc; /* Add border to the text */
+            padding: 8px; /* Add padding for better appearance */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            font-weight: bold;
+        }
+        
+        .baker {
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgb(243, 236, 236);
+            border-radius: 8px;
+            padding-top:30px;
+        }
+
+        .baker p {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgba(224, 96, 4, 0.938);
+         margin-left:300px ;
+        }
+        
+        .baker img{
+            float: left;
+            border-radius: 20px;
+            margin-left:30px ;
+            margin-top: 20px;
+        }
+       
+        .container {
+    text-align: center;
+    width: 100%; /* Adjust width as needed */
+    height: 70%;
+    margin: 100px auto; /* Center the box vertically and horizontally */
+    padding: 20px;
+     /* border: 2px solid rgba(224, 96, 4, 0.938); */
+   
+    background-color: rgb(243, 236, 236);
+}
+
+.container h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: inherit;
+    color: rgba(224, 96, 4, 0.938);
+    margin-bottom: 10px; /* Add some space between h1 and p */
+}
+
+.container p {
+    font-size: 24px;
+    font-weight: bold;
+}
+.image-container {
+    text-align: center; /* Center align columns */
+}
+
+.image-container2 {
+    text-align: center; /* Center align columns */
+    margin-top: 9%;
+}
+
+.image-container3 {
+    text-align: center; /* Center align columns */
+    margin-top: 9%;
+}
+
+
+.column1 {
+    display: inline-block;
+    margin: 0 20px; /* Adjust spacing between columns */
+}
+
+.box {
+    border: 1px solid #ccc; /* Border for the box */
+    border-radius: 8px; /* Border radius */
+    padding: 10px; /* Padding for the box */
+    text-align: center;
+
+}
+
+.box img {
+    width: 300px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    border-radius: 8px; /* Border radius for images */
+transition: filter 0.4s; /* Add transition for smooth effect */
+}
+.box img:hover {
+    
+    filter: blur(5px); 
+    
+}
+.description {
+    margin-top: 10px; /* Add space between image and description */
+}
+
+.description p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.price {
+    color: green; /* Example color for price */
+}
+
+.order-now {
+    background-color: rgba(224, 96, 4, 0.938);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+   
+.footer {
+    /* background-color: rgba(243, 236, 236); Background color */
+    padding: 20px;
+    text-align: center;
+    margin-top: 70px;
+     block-size: 290px;
+     background-image: url('https://images.pexels.com/photos/4197558/pexels-photo-4197558.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-item {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.order-online-footer {
+    background-color: rgba(224, 96, 4, 0.938); /* Button background color */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+}
+
+.order-online-footer:hover {
+    background-color: #c3780c; /* Darker shade on hover */
+}
+.footer a {
+    color: black; /* Change anchor color to black */
+}
+/* Style the navbar */
+.navbar {
+    overflow: hidden;
+  text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f5bee3;
+}
+
+/* Promotional message */
+.promotion {
+    color: #c3780c;
+    padding: 14px 20px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <span class="promotion">Flat 15% OFF on the first order. Use Code SIGNUP15</span>
+    </div>
+<div class="para">
+    <h1>DAILY CUPCAKE FLAVOURS <br> BAKED WITH LOVE!</h1>
+
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\best-pie.jpg" alt="best-pie.jpg">
+    <p>Our Delicious Pies !</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\best-pie1.jpg" alt="best-pie1.jpg">
+    <p>Raspberry Sorbet</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\best-pie2.jpg" alt="best-pie2.jpg">
+    <p>50 Tasty Apple Dessert To Try Now.</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\best-pie3.jpg" alt="best-pie3.jpg">
+    <p>Our Best Chocolate Ever</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\chocolate-mug1.jpg" alt="best-pie1.jpg">
+    <p>Easy Microwave Chocolate Mug Cake</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\chocolate-mug2.jpg" alt="best-pie2.jpg">
+    <p>Best No Bake Summer Dessert</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\chocolate-mug3.jpg" alt="best-pie3.jpg">
+    <p>Best Gluten-Free Dessert</p>
+</div>
+
+<div class="column">
+    <img src="C:\Users\Admin\Downloads\chocolate-mug4.jpg" alt="best-pie3.jpg">
+    <p>Crispy Tortilla Bowls With Strawberries </p>
+</div>
+
+    
+    
+<h1 style="text-align: center; font-size: 50px; color: black; ">Behind Every Cupcake, There's a Passionate Baker</h1>
+<div class="baker">
+    <div>
+    <img src="C:\Users\Admin\Downloads\baker-img3.jpg" alt="baker-img1.jpg" height="490px" width="490px">
+    </div>
+    <p style="font-size: 60px">Welcome to the heart of our bakery!</p>
+     <p style="font-size: 26px;"> Our master baker- Mr.John brings years of experience and a deep passion for crafting delicious treats.<br> With a keen eye for detail and a creative flair John infuses every cupcake with love and dedication.<br>
+
+        "Each cupcake tells a story, a blend of flavors, textures, and passion baked into every bite. It's not just about making desserts; it's about creating moments of joy, one cupcake at a time."</p>
+ </div>
+
+
+ <div class="container">
+    <h1>DESSERTS AND CUPCAKES</h1>
+    <p>A meal that ends with dessert is a celebration in itself! Pick a treat from our range of desserts including tarts, tiramisu cup, banoffee high and cupcakes.</p>
+</div>
+
+
+<div class="image-container">
+    <div class="column1">
+        <div class="box">
+            <img src="C:\Users\Admin\Downloads\Banafoee.jpeg" alt="best-pie.jpg">
+            <div class="description">
+                <p>Banafoee High</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column1">
+        <div class="box">
+            <img src="C:\Users\Admin\Downloads\Lemon.jpeg"  alt="best-pie1.jpg">
+            <div class="description">
+                <p>Lemon Tart</p>
+                <p class="price">$12.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column1">
+        <div class="box">
+            <img src="C:\Users\Admin\Downloads\coco.jpeg"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Chocklate Tart</p>
+                <p class="price">$9.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-container2">
+    <div class="column1">
+        <div class="box">
+            <img src="C:\Users\Admin\Downloads\choco.jpeg" alt="best-pie.jpg">
+            <div class="description">
+                <p>Chocklate Cupcake</p>
+                <p class="price">$10.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column1">
+        <div class="box">
+            <img src="C:\Users\Admin\Downloads\pexels-polverini-lian-10567214.jpg"  alt="best-pie1.jpg">
+            <div class="description">
+                <p>Tiramisu Cake</p>
+                <p class="price">$12.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column1">
+        <div class="box">
+            <img src="C:\Users\Admin\Downloads\pexels-valeria-boltneva-10120687.jpg"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Chocklate Mousee Cup</p>
+                <p class="price">$9.99</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="image-container3">
+    <div class="column1">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/7783241/pexels-photo-7783241.jpeg?auto=compress&cs=tinysrgb&w=600"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Assorted cupcake box 4packs</p>
+                <p class="price">$12</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column1">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/18955551/pexels-photo-18955551/free-photo-of-a-cupcake-with-blueberry-frosting.jpeg?auto=compress&cs=tinysrgb&w=600"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Chocklate & Blueberry Cupcake</p>
+                <p class="price">$7.98</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="column1">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/7144554/pexels-photo-7144554.jpeg?auto=compress&cs=tinysrgb&w=600"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Chocklate & Hazulnut Cupcake</p>
+                <p class="price">$65.8</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="image-container3">
+
+    <div class="column1">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/2525682/pexels-photo-2525682.png?auto=compress&cs=tinysrgb&w=600"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Red Velwet Cupcake</p>
+                <p class="price">$65.8</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="column1">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/7474211/pexels-photo-7474211.jpeg?auto=compress&cs=tinysrgb&w=600"  alt="best-pie2.jpg">
+            <div class="description">
+                <p>Blueberry Cheese Cupcake</p>
+                <p class="price">$65.8</p>
+                <button class="order-now">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div>
+
+<footer class="footer">
+    <div class="footer-content">
+        
+        <div class="footer-item"> 
+            <p>Like Our Products?<br><br>
+        Treat yourself to your favourite Theobroma products or surprise your loved ones with an edible gift.</p>
+        <button class="order-online-footer">Order Online</button>
+        <p style="font-size: small; ">
+            &#x1F4E7; Email: <a href="mailto:example@email.com">delightscreation@email.com</a><br>
+            &#x1F4DE; Phone: +1234567890
+        </p>
+        
+    </div>
+      
+    </div>
+</footer>
+
+</body>
+</html>
